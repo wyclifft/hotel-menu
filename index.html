@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paradise Hotel Menu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .menu-section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 24px;
+      margin: 40px 0 20px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .menu-item {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .menu-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .menu-content {
+      padding: 15px;
+    }
+    .menu-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .menu-price {
+      color: green;
+      float: right;
+    }
+    .menu-desc {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+    }
+    @media (max-width: 600px) {
+      .section-title {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Paradise Hotel</h1>
+    <p>Scan QR code to view this menu anytime</p>
+  </header>
+
+  <div class="menu-section">
+    <h2 class="section-title">Main Dishes</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/300x150?text=Beef+Stew" alt="Beef Stew">
+        <div class="menu-content">
+          <div class="menu-title">Beef Stew <span class="menu-price">Ksh 450</span></div>
+          <div class="menu-desc">Served with rice or chapati</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/300x150?text=Chicken+Fry" alt="Chicken Fry">
+        <div class="menu-content">
+          <div class="menu-title">Fried Chicken <span class="menu-price">Ksh 500</span></div>
+          <div class="menu-desc">Crispy and spicy chicken wings</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Drinks</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/300x150?text=Fresh+Juice" alt="Juice">
+        <div class="menu-content">
+          <div class="menu-title">Fresh Mango Juice <span class="menu-price">Ksh 150</span></div>
+          <div class="menu-desc">100% natural and chilled</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/300x150?text=Soda" alt="Soda">
+        <div class="menu-content">
+          <div class="menu-title">Coca-Cola 500ml <span class="menu-price">Ksh 100</span></div>
+          <div class="menu-desc">Served cold</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="margin: 50px 0;">
+
+  <div style="max-width: 600px; margin: auto; padding: 20px; background: #fff; border-radius: 10px;">
+    <h2 style="text-align:center;">Place Your Order</h2>
+    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+
+      <label for="table">Table Number:</label>
+      <select name="Table" id="table" required style="width:100%; padding:10px; margin-bottom:15px;">
+        <option value="">Select your table</option>
+        <option>Table 1</option>
+        <option>Table 2</option>
+        <option>Table 3</option>
+        <option>Table 4</option>
+        <option>Takeaway</option>
+      </select>
+
+      <label for="food">Your Order (Write the items):</label>
+      <textarea name="Order" id="food" rows="4" placeholder="e.g. 1 Beef Stew, 2 Fresh Juices" required style="width:100%; padding:10px; margin-bottom:15px;"></textarea>
+
+      <label for="notes">Special Notes:</label>
+      <input type="text" name="Notes" id="notes" placeholder="No onions, extra spicy..." style="width:100%; padding:10px; margin-bottom:15px;" />
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+
+      <button type="submit" style="background:green; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; width:100%;">
+        Submit Order
+      </button>
+    </form>
+  </div>
+</body>
+</html>
